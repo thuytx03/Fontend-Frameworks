@@ -16,11 +16,11 @@
     <script src="./libs/angular.min.js"></script>
   </head>
   <body ng-app="myapp">
-    <div ng-controller="demoController">
-      <h1>{{ welcome }}</h1>
-    </div>
+    
 
     <div ng-controller="infoController">
+      <h1>{{ welcome }}</h1>
+      <h1 ng-bind="welcome"></h1>
       <table class="table table-striped table-hover table-bordered text-center">
         <thead>
           <tr>
@@ -43,6 +43,26 @@
           </tr>
         </tbody>
       </table>
+      <input type="text" ng-model="test"> <br>
+
+      <label for="">Đội bóng</label>
+      <select ng-model="doibong" class="form-select">
+        <option value="">Vui lòng chọn</option>
+        <option value="1" >Arsenal</option>
+        <option value="2">Mc</option>
+        <option value="3">Mu</option>
+      </select>
+      <br>
+      <label for="">Giới tính: </label> <br>
+       <input type="radio" ng-model="gioitinh" value="1">Nam
+     <input type="radio" ng-model="gioitinh" value="2"> Nữ 
+     <input type="radio" ng-model="gioitinh" value="3"> Bê đê
+
+      <p>{{ thongbao }}</p>
+      <button ng-click="sayHello()">Hihi</button>
+
+      <h1 ng-mousemove="myMouse()">Đưa chuột vào</h1>
+      {{ count }}
     </div>
 
     <script
@@ -52,32 +72,7 @@
     ></script>
   </body>
 
-  <script>
-    function myFunc($scope) {
-      //luôn luôn có tham số $scope
-      $scope.welcome = "Hello word"; //đằng sau $scope là biến mình khởi tạo để render ra view
-    }
-    //Khai báo angular js cùng với vùng mình sử dụng
-    var app = angular.module("myapp", []);
-    //thực hiệc map hàm myFunc với vùng demoController để render dữ liệu ra
-    app.controller("demoController", myFunc);
-
-    app.controller("infoController", function myInfo($scope) {
-      // $scope.name="Thuỷ";
-      // $scope.age="19";
-      // $scope.phone="0121423534";
-      $scope.info = [
-        {
-          name: "Thuy",
-          age: 19,
-          phone: "0988766663",
-        },
-        {
-          name: "Xuan",
-          age: 19,
-          phone: "0988766663",
-        },
-      ];
-    });
+  <script src="app.js">
+    
   </script>
 </html>
