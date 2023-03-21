@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Title</title>
+    <script src="./libs/angular.min.js"></script>
+  </head>
+  <body ng-app="myapp">
+    <div ng-controller="demoController">
+      <h1>{{ welcome }}</h1>
+    </div>
+
+    <div ng-controller="infoController">
+      <table class="table table-striped table-hover table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Tên</th>
+            <th scope="col">Tuổi</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+            
+          <tr ng-repeat=" value in info">
+            <th scope="row">{{ value.name }}</th>
+            <th scope="row">{{ value.age }}</th>
+            <th scope="row">{{ value.phone }}</th>
+            <th>
+              <a href="" class="btn btn-danger">Xoá</a>
+              <a href="" class="btn btn-primary">Sửa</a>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <script>
+    function myFunc($scope) {
+      //luôn luôn có tham số $scope
+      $scope.welcome = "Hello word"; //đằng sau $scope là biến mình khởi tạo để render ra view
+    }
+    //Khai báo angular js cùng với vùng mình sử dụng
+    var app = angular.module("myapp", []);
+    //thực hiệc map hàm myFunc với vùng demoController để render dữ liệu ra
+    app.controller("demoController", myFunc);
+
+    app.controller("infoController", function myInfo($scope) {
+      // $scope.name="Thuỷ";
+      // $scope.age="19";
+      // $scope.phone="0121423534";
+      $scope.info = [
+        {
+          name: "Thuy",
+          age: 19,
+          phone: "0988766663",
+        },
+        {
+          name: "Xuan",
+          age: 19,
+          phone: "0988766663",
+        },
+      ];
+    });
+  </script>
+</html>
