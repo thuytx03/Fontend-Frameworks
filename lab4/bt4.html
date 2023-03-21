@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+</head>
+<script src="libs/angular.min.js"></script>
+<!-- nhúng thư viện angularjs -->
+
+<body ng-app="myapp">
+
+    <div class="container">
+        <div ng-controller="demoController">
+            <h1>{{welcome}}</h1>
+    
+        </div>
+        <div ng-controller="infocontroller">
+            <form>
+                <div class="form-group">
+                    <label for="my-input">Chiều dài</label>
+                    <input id="my-input" class="form-control" ng-model="length" type="text" name="">
+                </div>
+                <div class="form-group">
+                    <label for="my-input">Chiều rộng</label>
+                    <input id="my-input" class="form-control" ng-model="width" type="text" name="">
+                </div>
+                <div class="form-group">
+                    <label for="my-input">Diện tích</label>
+                    <input id="my-input" class="form-control" ng-bind="acreage" value="{{acreage}}" type="text" name="">
+                </div>
+                <div class="form-group">
+                    <label for="my-input">Chu vi</label>
+                    <input id="my-input" class="form-control" ng-bind="perimeter" value="{{perimeter}}" type="text"
+                        name="">
+                </div>
+                <button ng-click="calculate()" class="btn btn-primary mt-3">Calculate</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+function myFunct($scope){
+        //luôn luôn có tham số scope
+        $scope.welcome="Bài 4 - Lab 4";
+        // phía sau scope là biến  khởi tạo để render ra view
+    }
+    
+    // khai báo angularjs cùng với sự dụng 
+    var app = angular.module("myapp", []);
+    app.controller("demoController",myFunct);
+    // viết tắt
+    app.controller("infocontroller", function ($scope) {
+        $scope.calculate = function () {
+            var a = parseFloat($scope.width);
+            var b = parseFloat($scope.length);
+            $scope.acreage = a * b;
+            $scope.perimeter = (a + b) * 2;
+        }
+
+    });
+    // làm lab4
+</script>
+
+</html>
