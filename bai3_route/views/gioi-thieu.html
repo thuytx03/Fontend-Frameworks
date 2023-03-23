@@ -1,0 +1,26 @@
+<div>
+    <h1>{{ title }}</h1>
+    <table class="table table-striped table-inverse table-responsive text-center">
+        <thead class="thead-inverse">
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Tuổi</th>
+                <th>Phone</th>
+                <th>Active</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="value in info">
+                    <td scope="row">{{ value.id }}</td>
+                    <td>{{ value.name }}</td>
+                    <td>{{ value.age }}</td>
+                    <th>Phone</th>
+                    <th>
+                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="" class="btn btn-primary">Delete</a>
+                    </th>
+                </tr>
+            </tbody>
+    </table>
+</div>
