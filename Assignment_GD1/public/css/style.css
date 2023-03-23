@@ -1,0 +1,45 @@
+.active {
+  color: #fea116 !important;
+}
+.btn-bg {
+  background-color: #fea116 !important;
+}
+.bg-footer {
+  background-color: #0f172b !important;
+}
+.img {
+  padding: 20px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.img2 {
+    /* padding: 20px; */
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+  .img2:hover {
+    transform: scale(1.1);
+  }
+
+@media (max-width: 768px) {
+  .carousel-item {
+    margin-bottom: 20px;
+  }
+  .carousel-item img {
+    height: 300px !important;
+  }
+  .carousel-caption p {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 540px) {
+  .carousel-item img {
+    height: 200px !important;
+  }
+  .carousel-caption p {
+    font-size: 15px !important;
+  }
+}

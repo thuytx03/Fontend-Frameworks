@@ -1,0 +1,91 @@
+<title>{{ title }}</title>
+<hr>
+
+<form action="" method="post">
+
+    <div class="container-fluid">
+        <div class="row m-2">
+            <h3 class="active text-center">---Thông tin đặt hàng---</h3>
+
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Tên người đặt hàng</label>
+                    <div class="input-group">
+                        <input type="text" name="full_name" class="form-control" placeholder="Tên người đặt hàng"
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Số CMND || CCCD</label>
+                    <div class="input-group">
+                        <input type="text" name="full_name" class="form-control" placeholder="Số CMND || CCCD"
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Ngày sinh</label>
+                    <div class="input-group">
+                        <input type="date" name="full_name" class="form-control" 
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Giới tính</label>
+                    <div class="pt-2  border" style="border-radius: 5px; height: 39px;">
+                            <input type="radio" class="ms-2"  name="gender" /> Nam 
+                            <input type="radio"  name="gender" /> Nữ   
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-group">
+                        <input type="text" name="email" class="form-control" placeholder="Email"
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <div class="input-group">
+                        <input type="text" name="address" class="form-control" placeholder="Địa chỉ"
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <div class="input-group">
+                        <input type="text" name="numberphone" class="form-control" placeholder="Số điện thoại"
+                            aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Hình thức thanh toán</label>
+                    <select name="" class="form-select" id="">
+                        <option value="">---Chọn---</option>
+                        <option value="">Thanh toán bằng thẻ ngân hàng</option>
+                        <option value="">Thanh toán tiền mặt</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-end gap-2 mt-3">
+                <input type="submit" value="Đồng ý đặt hàng" class="btn btn-bg text-white">
+                <input type="reset" value="Nhập lại" class="btn btn-dark text-white">
+            </div>
+        </div>
+    </div>
+
+</form>

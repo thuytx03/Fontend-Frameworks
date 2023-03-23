@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="public/favicon/logo-bg.png" type="image/x-icon">
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/ContactController.js"></script>
+    <script src="controllers/AboutUsController.js"></script>
+    <script src="controllers/DetailController.js"></script>
+    <script src="controllers/BookRoomController.js"></script>
+
+    <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://uhchat.net/code.php?f=d0b98a"></script>
+
+</head>
+
+<body>
+    <div ng-app="app-route">
+        <!-- Navbar  -->
+        <nav class="navbar navbar-expand-lg navbar-light mt-2 mb-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="public/favicon/logo-removebg.png"  width="70" height="60" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#!/">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#!/about-us">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Chính sách
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Chính sách bảo mật</a></li>
+                                <li><a class="dropdown-item" href="#">Chính sách đổi trả</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/contact">Liên hệ</a>
+                        </li>
+
+
+                    </ul>
+
+                    <form class="d-flex gap-1">
+                        <a class="btn btn-dark text-white img2 " type="submit">ĐĂNG KÝ</a>
+                        <a class="btn btn-bg text-white img2" type="submit">ĐĂNG NHẬP</a>
+                    </form>
+
+                </div>
+            </div>
+
+        </nav>
+        <!-- End Navbar  -->
+
+        <main>
+            <div ng-view>
+
+
+            </div>
+        </main>
+
+        <!-- Footer  -->
+        <footer class="bg-footer text-white mt-5">
+            <div class="container-fluid">
+                <div class="row p-3  ">
+                    <div class="col-lg-3 col-md-6 col-12 btn-bg mt-lg-5 mb-5">
+                        <h1 class="m-4">Xuân Thuỷ</h1>
+                        <p class="m-4">Lorem ipsum dolor sit amet <strong class="text-dark">consectetur adipisicing
+                                elit</strong>. Repudiandae laboriosam </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12  mt-lg-5 mb-5">
+                        <h2 class="m-4">Contact Us</h2>
+                        <p class="m-4">Địa chỉ: Trịnh Văn Bô, HN</p>
+                        <p class="m-4">Phone: 00999999</p>
+                        <p class="m-4">Email:thuytph26691@fpt.edu.vn</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12  mt-lg-5 mb-5">
+                        <h2 class="m-4">Company</h2>
+                        <p class="m-4">Liên hệ</p>
+                        <p class="m-4">Giới thiệu</p>
+                        <p class="m-4">Hỏi đáp</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12  mt-lg-5 mb-5">
+                        <h2 class="m-4">Service</h2>
+                        <p class="m-4">Food</p>
+                        <p class="m-4">Gym</p>
+                        <p class="m-4">Party</p>
+                    </div>
+                    <hr>
+                    <p class="text-center ">2023 © Trinh Xuan Thuy</p>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!--End Footer  -->
+
+    </div>
+
+
+    <script>
+        angular.module('app-route', ['ngRoute']).config(function ($routeProvider) {
+            $routeProvider.when('/', {
+                templateUrl: 'views/home.html',
+                controller: HomeController
+            }).when('/contact', {
+                templateUrl: 'views/contact.html',
+                controller: ContactController
+            }).when('/about-us', {
+                templateUrl: 'views/about-us.html',
+                controller: AboutUsController
+            }).when('/detail', {
+                templateUrl: 'views/detail.html',
+                controller: DetailController
+            }).when('/book-room', {
+                templateUrl: 'views/book-room.html',
+                controller: BookRoomController
+            })
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
