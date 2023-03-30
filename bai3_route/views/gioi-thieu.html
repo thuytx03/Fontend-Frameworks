@@ -1,26 +1,51 @@
 <div>
     <h1>{{ title }}</h1>
-    <table class="table table-striped table-inverse table-responsive text-center">
-        <thead class="thead-inverse">
-            <tr>
-                <th>STT</th>
-                <th>Tên</th>
-                <th>Tuổi</th>
-                <th>Phone</th>
-                <th>Active</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="value in info">
-                    <td scope="row">{{ value.id }}</td>
-                    <td>{{ value.name }}</td>
-                    <td>{{ value.age }}</td>
-                    <th>Phone</th>
-                    <th>
-                        <a href="" class="btn btn-danger">Delete</a>
-                        <a href="" class="btn btn-primary">Delete</a>
-                    </th>
+    <div class="container">
+        <div class="row">
+            
+            <div class="form-group col-4">
+                <label for="my-input">Tên</label>
+                <input type="text" ng-model="inputValue.ten" class="form-control">
+                <span ng-if="kiemTraDuLieu.ten==true" class="text-danger">Vui lòng nhập tên</span>
+            
+            </div>
+            <div class="form-group col-4">
+                <label for="my-input">Tuổi</label>
+                <input type="text" ng-model="inputValue.tuoi" class="form-control">
+                <span ng-if="kiemTraDuLieu.tuoi==true" class="text-danger">Vui lòng nhập tuổi</span>
+
+            </div>
+            <div class="form-group mt-4 col-4 mx-auto">
+                <button ng-click="onSubmitForm()" class="btn btn-primary w-100">Lưu</button>
+            </div>
+        </div>
+        
+        <table class="table table-striped table-inverse table-responsive text-center mt-4">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Tuổi</th>
+                    <th>Active</th>
                 </tr>
-            </tbody>
-    </table>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ds in danhsach">
+                        <td scope="row">{{ ds.id }}</td>
+                        <td>{{ ds.ten }}</td>
+                        <td>{{ ds.tuoi }}</td>
+                        <th>
+                            <button ng-click="onEdit(ds.id)" class="btn btn-primary">Edit</button>
+                            <button ng-click="onDelete(ds.id)" class="btn btn-danger">Delete</button>
+                        </th>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    
+
+
+    
+
+
 </div>
