@@ -4,235 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Title</title>
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.min.js"></script>
+    <script src="./controllers/TrangChuController.js"></script>
 </head>
 <body>
-    <div class="container-fluid bg-light">
+    <div ng-app="app-route" class="container-fluid bg-light">
         <div class="banner">
             <img src="./image/Banner.png" class="img-fluid" alt="">
         </div>
         <h1 class="text-center mt-4 mb-4" style="color:#191970;">PHIẾU ĐĂNG KÝ HỌC</h1>
-        
-        <div class="container bg-white">
 
-            <h5 class="pt-5" style="color:#191970;">THÔNG TIN SINH VIÊN</h5>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label for="" class="mb-2" >Họ và tên</label>
-                    <input type="text" class="form-control" placeholder="Họ và tên">
-                </div>
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class="mb-2">Ngày sinh</label>
-                    <input type="date" class="form-control">
-                </div>
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class="mb-2">Giới tính</label>
-                    <select name="" id="" class="form-select">
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4">
-                    <label class="mb-2">Dân tộc</label>
-                    <input type="text" class="form-control" placeholder="Kinh">
-                </div>
-                <!----->
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class="mb-2">Số CCCD/Chứng minh nhân dân</label>
-                    <input type="text" class="form-control" placeholder="0123456789">
-                </div>
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class="mb-2">Ngày cấp</label>
-                    <input type="date" class="form-control">
-                </div>
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class="mb-2">Nơi cấp</label>
-                    <input type="text" class="form-control" placeholder="Hà Nội, Hồ Chí Minh,...">
-                </div>
-
-                <!----->
-
-                <p class="fw-bold mt-4" style="color:#191970;">Hộ khẩu thường trú (Điền thông tin đầy đủ nhu trong sổ hộ khẩu )</p>
-                <div class="col-lg-3 col-md-6 mt-1">
-                   
-                    <select name="" id="" class="form-select">
-                        <option value="">Chọn tỉnh/thành phố</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-1">
-                
-                    <select name="" id="" class="form-select">
-                        <option value="">Quận/huyện</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-1">
-                    <select name="" id="" class="form-select">
-                        <option value="">Xã/Phường/Thị trấn</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-1">
-                    <input type="text" class="form-control" placeholder="Số nhà, đường, ngõ,xóm">
-                </div>
-                <!---->
-                <div class="col-lg-3 col-sm-6 mt-4">
-                    <label class="mb-2">Số điện thoại thí sinh</label>
-                    <input type="text" class="form-control" placeholder="0123456789">
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4">
-                    <label class="mb-2">Email thí sinh</label>
-                    <input type="text" class="form-control" placeholder="example@gmail.com">
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4">
-                    <label class="mb-2">Họ tên phụ huynh/người bảo trợ</label>
-                    <input type="text" class="form-control" placeholder="Họ và tên">
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4">
-                    <label class="mb-2">Số điện thoại phụ huynh/ bảo trợ</label>
-                    <input type="text" class="form-control" placeholder="0123456789">
-                </div>
-
-                <!---->
-                <h5 class="mt-4 mb-3" style="color:#191970;">THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC</h5>
-                <div class="col-12">
-                    <div class="col-lg-6 col-md-6">
-                        <label for="" class="mb-2">Cơ sở nhập học</label>
-                        <select name="" id="" class="form-select">
-                            <option value="">Hà Nội</option>
-                            <option value="">Nam</option>
-                            <option value="">Nữ</option>
-                        </select>
-                    </div>
-                </div>
-               
-                <!---->
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class="">Nguyện vọng thứ nhất</label>
-                    <select name="" id="" class="form-select mt-2 ">
-                        <option value="">Chuyên ngành</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class=""></label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Ngành</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class="">Nguyện vọng thứ hai</label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Chuyên ngành</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mt-4">
-                    <label class=""></label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Ngành</option>
-                        <option value="">Nam</option>
-                        <option value="">Nữ</option>
-                    </select>
-                </div>
-                <!----->
-                <div class="col-lg-6 col-md-6 mt-4">
-                    <label class="">Năm tốt nghiệp THPT hoặc tương đương</label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">2023</option>
-                        <option value="">2002</option>
-                        <option value="">2020</option>
-                    </select>
-                </div>
-                <div class="col-lg-6 col-md-6 mt-4">
-                    <label class="">Trường tốt nghiệp THPT hoặc tương đương</label>
-                   <input type="text" class="form-control mt-2" placeholder="Trường">
-                </div>
-                <!---->
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class="">Nơi tốt nghiệp</label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Chọn tỉnh/ thành phố</option>
-                        <option value="">2002</option>
-                        <option value="">2020</option>
-                    </select>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class=""></label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Quận/huyện</option>
-                        <option value="">2002</option>
-                        <option value="">2020</option>
-                    </select>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-4">
-                    <label class=""></label>
-                    <select name="" id="" class="form-select mt-2">
-                        <option value="">Phường/xã</option>
-                        <option value="">2002</option>
-                        <option value="">2020</option>
-                    </select>
-                </div>
-
-                <!---->
-                <h5 class="mt-4 mb-3" style="color:#191970;">THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</h5>
-                <div class="col-lg-6">
-                    <label for="">Người nhận</label> <br>
-                    <input type="checkbox" class="mt-2"> Thí sinh <br>
-                    <input type="checkbox" class="mt-4"> Thí sinh
-                </div>
-                <div class="col-lg-6">
-                    <label for="">Địa chỉ nhận</label>
-                    <br>
-                    <input type="checkbox" class="mt-2"> Địa chỉ hộ khẩu thường chú <br>
-                    <input type="checkbox" class="mt-4"> Khác
-                </div>
-                <!----->
-                <h5 class="mt-4 ">TẢI LÊN GIÁY TỜ XÁC THỰC</h5>
-                <div class="col-lg-3 col-md-6">
-                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
-                    <img src="image/cccd-mt.png" alt="" class="img-fluid">
-                    <input type="file" class="mt-2">
-                </div> 
-                <div class="col-lg-3 col-md-6">
-                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
-                    <img src="image/cccd-mt.png" alt="" class="img-fluid">
-                    <input type="file" class="mt-2">
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
-                    <img src="image/bang-tot-nghiep-thpt.png" alt="" class="img-fluid">
-                    <input type="file" class="mt-2">
-                </div>   
-                <!----->
-                <div class="col-12 mt-4">
-                    <div class="col-lg-6">
-                        <input type="checkbox" class="mt-2"> Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này là đúng sự thật. Nếu sai tôi hoàn toàn chịu trách nhiệm và nhận xử lý theo Quy chế tuyển sinh cao đẳng hiện hành
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="checkbox" class="mt-2"> Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà trường
-                    </div>
-                </div>
-
-                <div class="form-group text-center mt-4">
-                    <button type="submit"class="btn btn-dark " style="height:60px; width: 200px;" >Gửi hồ sơ đăng ký</button>
-                </div>
-                   
-                
-
-
-
-            </div>
+        <div ng-view class="container bg-white">
+            
+            
         </div>
     </div>
+    <script>
+        //muốn sử dụng route trong AngularJS phải sử dụng đoạn code dưới
+        angular.module('app-route',['ngRoute']).config(function($routeProvider){
+            $routeProvider.when('/',{
+                //Định nghiax tên route là trang chủ
+                templateUrl:'views/trang-chu.html', //Đường dẫn đến views
+                controller: TrangChuController
+            })
+        })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

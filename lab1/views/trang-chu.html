@@ -1,0 +1,309 @@
+<title>{{ title }}</title>
+<h5 class="pt-5" style="color:#191970;">THÔNG TIN SINH VIÊN</h5>
+<div class="row">
+
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label for="" class="mb-2">Họ và tên</label>
+        <input type="text" ng-model="inputValue.ten" class="form-control" placeholder="Họ và tên">
+        <span ng-if="kiemTraDuLieu.ten==true" class="text-danger">Vui lòng nhập tên</span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class="mb-2">Ngày sinh</label>
+        <input type="date" ng-model="inputValue.ngaysinh" class="form-control">
+        <span ng-if="kiemTraDuLieu.ngaysinh==true" class="text-danger">Vui lòng nhập ngày sinh</span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class="mb-2">Giới tính</label>
+        <select name="" id="" ng-model="inputValue.gioitinh" class="form-select">
+            <option value="">Vui lòng chọn</option>
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.gioitinh==true" class="text-danger">Vui lòng nhập giới tính </span>
+
+    </div>
+    <div class="col-lg-3 col-sm-6 mt-4">
+        <label class="mb-2">Dân tộc</label>
+        <input type="text" ng-model="inputValue.dantoc" class="form-control" placeholder="Kinh">
+        <span ng-if="kiemTraDuLieu.dantoc==true" class="text-danger">Vui lòng nhập dân tộc </span>
+
+    </div>
+    <!----->
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class="mb-2">Số CCCD/Chứng minh nhân dân</label>
+        <input type="text" ng-model="inputValue.cmnd" class="form-control" placeholder="0123456789">
+        <span ng-if="kiemTraDuLieu.cmnd==true" class="text-danger">Vui lòng nhập CMND </span>
+
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class="mb-2">Ngày cấp</label>
+        <input type="date" ng-model="inputValue.ngaycap" class="form-control">
+        <span ng-if="kiemTraDuLieu.ngaycap==true" class="text-danger">Vui lòng nhập ngày cấp </span>
+
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class="mb-2">Nơi cấp</label>
+        <input type="text" ng-model="inputValue.noicap" class="form-control" placeholder="Hà Nội, Hồ Chí Minh,...">
+        <span ng-if="kiemTraDuLieu.noicap==true" class="text-danger">Vui lòng nhập nơi cấp </span>
+
+    </div>
+
+    <!----->
+
+    <p class="fw-bold mt-4" style="color:#191970;">Hộ khẩu thường trú (Điền thông tin đầy đủ nhu trong sổ hộ khẩu )</p>
+    <div class="col-lg-3 col-md-6 mt-1">
+
+        <select name="" ng-model="inputValue.tinh_hktt" id="" class="form-select">
+            <option value="">Chọn tỉnh/thành phố</option>
+            <option value="1">Hà Nội</option>
+            <option value="2">Phú Thọ</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.tinh_hktt==true" class="text-danger">Vui lòng nhập tỉnh thành phố </span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-1">
+
+        <select name="" id="" ng-model="inputValue.huyen_hktt" class="form-select">
+            <option value="">Quận/huyện</option>
+            <option value="1">Hoài Đức</option>
+            <option value="2">Đan Phượng</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.huyen_hktt==true" class="text-danger">Vui lòng nhập huyện </span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-1">
+        <select name="" id="" ng-model="inputValue.xa_hktt" class="form-select">
+            <option value="">Xã/Phường/Thị trấn</option>
+            <option value="1">Đức Thượng</option>
+            <option value="2">Đức Giang</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.xa_hktt==true" class="text-danger">Vui lòng nhập xã </span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-1">
+        <input type="text" ng-model="inputValue.sonha" class="form-control" placeholder="Số nhà, đường, ngõ,xóm">
+        <span ng-if="kiemTraDuLieu.sonha==true" class="text-danger">Vui lòng nhập số nhà </span>
+
+    </div>
+    <!---->
+    <div class="col-lg-3 col-sm-6 mt-4">
+        <label class="mb-2">Số điện thoại thí sinh</label>
+        <input type="text" ng-model="inputValue.sdt_sv" class="form-control" placeholder="0123456789">
+        <span ng-if="kiemTraDuLieu.sdt_sv==true" class="text-danger">Vui lòng nhập sdt thí sinh</span>
+
+    </div>
+    <div class="col-lg-3 col-sm-6 mt-4">
+        <label class="mb-2">Email thí sinh</label>
+        <input type="text" ng-model="inputValue.email_sv" class="form-control" placeholder="example@gmail.com">
+        <span ng-if="kiemTraDuLieu.email_sv==true" class="text-danger">Vui lòng nhập email thí sinh</span>
+
+    </div>
+    <div class="col-lg-3 col-sm-6 mt-4">
+        <label class="mb-2">Họ tên phụ huynh/người bảo trợ</label>
+        <input type="text" ng-model="inputValue.ten_ph" class="form-control" placeholder="Họ và tên">
+        <span ng-if="kiemTraDuLieu.ten_ph==true" class="text-danger">Vui lòng nhập tên phụ huynh</span>
+
+    </div>
+    <div class="col-lg-3 col-sm-6 mt-4">
+        <label class="mb-2">Số điện thoại phụ huynh/ bảo trợ</label>
+        <input type="text" ng-model="inputValue.sdt_ph" class="form-control" placeholder="0123456789">
+        <span ng-if="kiemTraDuLieu.sdt_ph==true" class="text-danger">Vui lòng nhập sdt phụ huynh</span>
+
+    </div>
+
+    <!---->
+    <h5 class="mt-4 mb-3" style="color:#191970;">THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC</h5>
+    <div class="col-12">
+        <div class="col-lg-6 col-md-6">
+            <label for="" class="mb-2">Cơ sở nhập học</label>
+            <select name="" ng-model="inputValue.cosonhaphoc" id="" class="form-select">
+                <option value="">Vui lòng chọn</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">HCM</option>
+            </select>
+            <span ng-if="kiemTraDuLieu.cosonhaphoc==true" class="text-danger">Vui lòng nhập cơ sở nhập học</span>
+
+        </div>
+    </div>
+
+    <!---->
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class="">Nguyện vọng thứ nhất</label>
+        <select name="" ng-model="inputValue.nv1" id="" class="form-select mt-2 ">
+            <option value="">Chuyên ngành</option>
+            <option value="1">CNTT</option>
+            <option value="2">TKDH</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.nv1==true" class="text-danger">Vui lòng nhập nguyện vọng 1</span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class=""></label>
+        <select name="" id="" ng-model="inputValue.nganh1" class="form-select mt-2">
+            <option value="">Ngành</option>
+            <option value="1">Thiết kế website</option>
+            <option value="2">Lập trình mobile</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.nganh1==true" class="text-danger">Vui lòng nhập ngành học</span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class="">Nguyện vọng thứ hai</label>
+        <select name="" ng-model="inputValue.nv2" id="" class="form-select mt-2">
+            <option value="">Chuyên ngành</option>
+            <option value="1">CNTT</option>
+            <option value="2">TKDH</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.nv2==true" class="text-danger">Vui lòng nhập nguyện vọng 2</span>
+
+    </div>
+    <div class="col-lg-3 col-md-6 mt-4">
+        <label class=""></label>
+        <select name="" ng-model="inputValue.nganh2" id="" class="form-select mt-2">
+            <option value="">Ngành</option>
+            <option value="1">Thiết kế website</option>
+            <option value="2">Lập trình mobile</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.nganh2==true" class="text-danger">Vui lòng nhập ngành học</span>
+
+    </div>
+    <!----->
+    <div class="col-lg-6 col-md-6 mt-4">
+        <label class="">Năm tốt nghiệp THPT hoặc tương đương</label>
+        <select name="" ng-model="inputValue.namtn" id="" class="form-select mt-2">
+            <option value="2023">2023</option>
+            <option value="2020">2020</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.namtn==true" class="text-danger">Vui lòng nhập năm tốt nghiệp</span>
+
+    </div>
+    <div class="col-lg-6 col-md-6 mt-4">
+        <label class="">Trường tốt nghiệp THPT hoặc tương đương</label>
+        <input type="text" ng-model="inputValue.truongtn" class="form-control mt-2" placeholder="Trường">
+        <span ng-if="kiemTraDuLieu.truongtn==true" class="text-danger">Vui lòng nhập trường tn</span>
+
+    </div>
+    <!---->
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class="">Nơi tốt nghiệp</label>
+        <select name="" ng-model="inputValue.tinhtn" id="" class="form-select mt-2">
+            <option value="">Chọn tỉnh/thành phố</option>
+            <option value="1">Hà Nội</option>
+            <option value="2">Phú Thọ</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.tinhtn==true" class="text-danger">Vui lòng nhập tỉnh</span>
+
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class=""></label>
+        <select name="" ng-model="inputValue.huyentn" id="" class="form-select mt-2">
+            <option value="">Quận/huyện</option>
+            <option value="1">Hoài Đức</option>
+            <option value="2">Đan Phượng</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.huyentn==true" class="text-danger">Vui lòng nhập huyện</span>
+
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4">
+        <label class=""></label>
+        <select name="" ng-model="inputValue.xatn" id="" class="form-select mt-2">
+            <option value="">Xã/Phường/Thị trấn</option>
+            <option value="1">Đức Thượng</option>
+            <option value="2">Đức Giang</option>
+        </select>
+        <span ng-if="kiemTraDuLieu.xatn==true" class="text-danger">Vui lòng nhập xa</span>
+
+    </div>
+
+    <!---->
+    <!-- <h5 class="mt-4 mb-3" style="color:#191970;">THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</h5>
+                <div class="col-lg-6">
+                    <label for="">Người nhận</label> <br>
+                    <input type="checkbox" class="mt-2"> Thí sinh <br>
+                    <input type="checkbox" class="mt-4"> Thí sinh
+                </div>
+                <div class="col-lg-6">
+                    <label for="">Địa chỉ nhận</label>
+                    <br>
+                    <input type="checkbox" class="mt-2"> Địa chỉ hộ khẩu thường chú <br>
+                    <input type="checkbox" class="mt-4"> Khác
+                </div> -->
+    <!----->
+    <!-- <h5 class="mt-4 ">TẢI LÊN GIÁY TỜ XÁC THỰC</h5>
+                <div class="col-lg-3 col-md-6">
+                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
+                    <img src="image/cccd-mt.png" alt="" class="img-fluid">
+                    <input type="file" class="mt-2">
+                </div> 
+                <div class="col-lg-3 col-md-6">
+                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
+                    <img src="image/cccd-mt.png" alt="" class="img-fluid">
+                    <input type="file" class="mt-2">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <label class="">Ảnh CMT/CCCD mặt trước <i>(bắt buộc)</i> </label>
+                    <img src="image/bang-tot-nghiep-thpt.png" alt="" class="img-fluid">
+                    <input type="file" class="mt-2">
+                </div>    -->
+    <!----->
+    <!-- <div class="col-12 mt-4">
+                    <div class="col-lg-6">
+                        <input type="checkbox" class="mt-2"> Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này là đúng sự thật. Nếu sai tôi hoàn toàn chịu trách nhiệm và nhận xử lý theo Quy chế tuyển sinh cao đẳng hiện hành
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="checkbox" class="mt-2"> Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà trường
+                    </div>
+                </div> -->
+
+    <div class="form-group text-center mt-4">
+        <button type="submit" class="btn btn-dark " ng-click="onSubmitForm()" style="height:60px; width: 200px;">Gửi hồ
+            sơ đăng ký</button>
+    </div>
+
+
+    <div class="mt-5 mb-5">
+        <h1 class="text-center">Thông tin phiếu đăng ký học</h1>
+        <div class="row" ng-repeat="ds in danhsach">
+            <div class="col-6 mt-3">
+                <h5>1:Thông tin sinh viên</h5>
+                <p>Họ và tên: {{ ds.ten }}</p>
+                <p>Ngày sinh:{{ ds.ngaysinh }}</p>
+                <p>Giới tính:{{ ds.gioitinh }}</p>
+                <p>Dân tộc:{{ ds.dantoc }}</p>
+                <p>CMND || CCCD: {{ ds.cmnd }}</p>
+                <p>Ngày cấp: {{ ds.ngaycap }}</p>
+                <p>Nơi cấp: {{ ds.noicap }}</p>
+            </div>
+            <div class="col-6 mt-3">
+                <h5>2:Hộ khẩu thường trú</h5>
+                <p>Tỉnh/Thành phố: {{ ds.tinh_hktt }}</p>
+                <p>Quận/Huyện: {{ ds.huyen_hktt }}</p>
+                <p>Xã/Phường:{{ ds.xa_hktt }}</p>
+                <p>Số nhà:{{ ds.sonha }}</p>
+                <p>SDT thí sinh: {{ ds.sdt_sv }}</p>
+                <p>EMail thí sinh: {{ ds.email_sv }}</p>
+                <p>Họ tên phụ huynh: {{ ds.ten_ph }}</p>
+                <p>SDT phụ huynh: {{ ds.sdt_ph }}</p>
+            </div>
+            <div class="col-12 mt-3">
+                <h5>3:Thông tin đăng ký trường cao đẳng fpt polytechnic</h5>
+                <p>Cơ sở nhập học:{{ ds.cosonhaphoc }}</p>
+                <p>Chuyên ngành 1: {{ ds.nv1 }}</p>
+                <p>Ngành 1: {{ ds.nganh1 }}</p>
+                <p>Chuyên ngành 2: {{ ds.nv2 }}</p>
+                <p>Ngành 2: {{ ds.nganh2 }}</p>
+                <p>Năm tốt nghiệp: {{ ds.namtn }}</p>
+                <p>Trường tốt nghiệp: {{ ds.truongtn }}</p>
+                <p>Tỉnh/Thành phố:{{ ds.tinhtn }}</p>
+                <p>Quận/Huyện: {{ ds.huyentn }}</p>
+                <p>Xã/Phường: {{ ds.xatn }}</p>
+                
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
