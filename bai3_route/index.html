@@ -11,6 +11,7 @@
     <script src="./libs/angular-route.min.js"></script>
     <script src="controllers/TrangChuController.js"></script>
     <script src="controllers/GioiThieuController.js"></script>
+    <script src="controllers/NhanVienController.js"></script>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
                             <a class="nav-link" href="#!/gioi-thieu/2">Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#!/gioi-thieu/2">Nhân viên</a>
+                            <a class="nav-link" href="#!/nhan-vien">Nhân viên</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#!/gioi-thieu/2">Cán bộ</a>
@@ -73,6 +74,10 @@
                 //Định nghiax tên route là trang chủ
                 templateUrl: 'views/gioi-thieu.html', //Đường dẫn đến views
                 controller: GioiThieuController
+            }).when('/nhan-vien', {
+                //Định nghiax tên route là trang chủ
+                templateUrl: 'views/nhan-vien.html', //Đường dẫn đến views
+                controller: NhanVienController,
             })
         })
     </script>

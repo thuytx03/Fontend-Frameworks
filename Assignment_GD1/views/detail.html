@@ -1,226 +1,233 @@
 <title>{{ title }}</title>
 <hr class="display-4" />
 
-    <!--Form Search-->
-    <div class="container-fluid">
+<!--Form Search-->
+<div class="container-fluid">
     <form action="" method="POST">
         <div class="row m-2">
             <div class="form-group col-md-9 col-sm-12 ">
                 <!-- <i class="fa-solid fa-magnifying-glass "></i> -->
-                <input type="text" class="form-control pl-5 mt-2 " id="exampleInput" placeholder="Tìm kiếm..." name="keyword">
+                <input type="text" class="form-control pl-5 mt-2 " id="exampleInput" placeholder="Tìm kiếm..."
+                    name="keyword">
             </div>
             <div class="form-group col-md-3 col-sm-12 ">
-                <input type="submit" class="form-control btn-bg text-white mt-2 "  value="Tìm kiếm" name="search">
+                <input type="submit" class="form-control btn-bg text-white mt-2 " value="Tìm kiếm" name="search">
             </div>
         </div>
     </form>
-    </div>
-    <!--End form search-->
-    <!-------------------------------------------------------------------------------------------->
-    <!-- <hr class="display-4" /> -->
-    <!--Trang chi tiết-->
-    <div class="container-fluid mt-5">
-      <div class="row m-2">
-        <div class="col-md-8">
-          <div>
-            <h2 value="">Phòng vip</h2>
-            <p>Địa chỉ: Trịnh Văn Bô, Hà Nội</p>
-          </div>
-          <div>
-          <img src="public/image/room-1.jpg" alt="" width="100%" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-md-4 mt-3">
-          <div class="card" style="width: 100%;">
-         
-            <div class="card-body">
-             
-            <form action="" method="post">
-            <div class="form-group">
-                  <label for="my-input">Ngày nhận phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="check_in_date" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="my-input">Ngày trả phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="check_out_date" required>
-                </div>
-                <a href="#!/book-room" class="btn btn-bg text-white col-md-12 mt-2">Đặt phòng</a>
-            </form>
-
-              <div class="mt-3 text-danger">
-                <h3>Giá:$100/Night</h3> 
-                <p>Lưu ý: Giá phòng sẽ thay đổi theo từng ngày từng thời điểm(ngày lễ, tết, cuối tuần)</p>
-              </div>
-            
-              <!-- <a href="/du_an_1_poly_hotel/?role=client&mod=bill" class="btn bg-success col-md-12">Đặt phòng</a> -->
-              <div class="row text-center mt-2">
-                <div class="col-6">
-                  <p>Diện tích</p>
-                  <p>15-30m2</p>
-                </div>
-                <div class="col-6">
-                  <p>Trạng thái</p>
-                  <p class="text-info">Có thể thuê</p>
-                </div>
-              </div>
+</div>
+<!--End form search-->
+<!-------------------------------------------------------------------------------------------->
+<!-- <hr class="display-4" /> -->
+<!--Trang chi tiết-->
+<div class="container-fluid mt-5">
+    <div class="row m-2">
+        <div class="col-md-12">
+            <div>
+                <h2 value="">Phòng vip</h2>
+                <p>Địa chỉ: Trịnh Văn Bô, Hà Nội</p>
             </div>
-          </div>
+            <div>
+                <img src="public/image/room-1.jpg" alt="" width="100%" class="img-fluid">
+            </div>
         </div>
-      </div>
-      <div class="container-fluid m-2">
+        <div class="col-md-12 mt-3">
+            <div class="card" style="width: 100%;">
+
+                <div class="card-body">
+
+                    <div class="row mt-3 text-danger ">
+                        <div class="col-lg-10 col-md-10 col-12">
+                            <h3>Giá:$100/Night</h3>
+                            <p>Lưu ý: Giá phòng sẽ thay đổi theo từng ngày từng thời điểm(ngày lễ, tết, cuối tuần)</p>
+
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-12">
+                            <a href="#!/book-room" class="btn btn-bg text-white  img2">Đặt phòng</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row text-center mt-2">
+                        <div class="col-3">
+                            <p>Diện tích</p>
+                            <p>15-30m2</p>
+                        </div>
+                        <div class="col-3">
+                            <p>Số giường</p>
+                            <p>2</p>
+                        </div>
+                        <div class="col-3">
+                            <p>TV</p>
+                            <p>1</p>
+                        </div>
+
+                        <div class="col-3">
+                            <p>Trạng thái</p>
+                            <p class="text-info">Có thể thuê</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid m-2">
         <h3>Mô tả</h3>
-          <h5>
+        <h5>
             Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!
-          </h5>
-      </div>
-
+        </h5>
     </div>
-    <!--End trang chi tiết-->
 
-    
+</div>
+<!--End trang chi tiết-->
 
-    <!--Sản phẩm liên quan-->
-    <div class="container-fluid mt-5">
-        <hr>
-        <div class="row m-2 text-center ">
-            <h5 class="active">--OUR ROOMS--</h5>
-            <h1>Explore Our <strong class="active">ROOMS</strong> </h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-12 mt-3">
-                <div class="card">
-                    <img src="public/image/room-1.jpg" class="img-fluid img" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title d-flex justify-content-between">
-                            <div>
-                                Phòng vip
-                            </div>
-                            <div class="fs-6 active">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-    
-                            </div>
-                        </h5>
-                        <div class="card-text d-flex justify-content-between active mt-1 mb-1">
-                            <div>
-                                <i class="fa-solid fa-bed"></i> 3 Bed
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-bath"></i> 2 Bath
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-tv"></i> TV
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-wifi"></i> Wifi
-                            </div>
+
+
+<!--Sản phẩm liên quan-->
+<div class="container-fluid mt-5">
+    <hr>
+    <div class="row m-2 text-center ">
+        <h5 class="active">--OUR ROOMS--</h5>
+        <h1>Explore Our <strong class="active">ROOMS</strong> </h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+            <div class="card">
+                <img src="public/image/room-1.jpg" class="img-fluid img" alt="">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        <div>
+                            Phòng vip
                         </div>
-                        <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
-                        <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
+                        <div class="fs-6 active">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between active mt-1 mb-1">
+                        <div>
+                            <i class="fa-solid fa-bed"></i> 3 Bed
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bath"></i> 2 Bath
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-tv"></i> TV
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-wifi"></i> Wifi
+                        </div>
                     </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
-                        <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
-                        <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
-                    </div>
+                    <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
+                    <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12 mt-3">
-                <div class="card">
-                    <img src="public/image/room-2.jpg" class="img-fluid img" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title d-flex justify-content-between">
-                            <div>
-                                Phòng vip
-                            </div>
-                            <div class="fs-6 active">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-    
-                            </div>
-                        </h5>
-                        <div class="card-text d-flex justify-content-between active mt-1 mb-1">
-                            <div>
-                                <i class="fa-solid fa-bed"></i> 3 Bed
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-bath"></i> 2 Bath
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-tv"></i> TV
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-wifi"></i> Wifi
-                            </div>
-                        </div>
-                        <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
-                        <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
-                        <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
-                        <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-12 mt-3">
-                <div class="card">
-                    <img src="public/image/room-3.jpg" class="img-fluid img" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title d-flex justify-content-between">
-                            <div>
-                                Phòng vip
-                            </div>
-                            <div class="fs-6 active">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-    
-                            </div>
-                        </h5>
-                        <div class="card-text d-flex justify-content-between active mt-1 mb-1">
-                            <div>
-                                <i class="fa-solid fa-bed"></i> 3 Bed
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-bath"></i> 2 Bath
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-tv"></i> TV
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-wifi"></i> Wifi
-                            </div>
-                        </div>
-                        <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
-                        <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
-                        <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
-                        <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
-                    </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
+                    <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
+                    <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+            <div class="card">
+                <img src="public/image/room-2.jpg" class="img-fluid img" alt="">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        <div>
+                            Phòng vip
+                        </div>
+                        <div class="fs-6 active">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
 
-    <!--End Sản phẩm liên quan-->
+                        </div>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between active mt-1 mb-1">
+                        <div>
+                            <i class="fa-solid fa-bed"></i> 3 Bed
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bath"></i> 2 Bath
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-tv"></i> TV
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-wifi"></i> Wifi
+                        </div>
+                    </div>
+                    <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
+                    <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
+                    <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
+                    <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+            <div class="card">
+                <img src="public/image/room-3.jpg" class="img-fluid img" alt="">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-between">
+                        <div>
+                            Phòng vip
+                        </div>
+                        <div class="fs-6 active">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
 
-    <!--Google Map-->
-    <div class="container-fluid mt-5 ">
-        <div class="row m-2">
-            <h3 class="active text-center">---Bản đồ---</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881391!2d105.7445984141576!3d21.038132792835867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2sFPT%20Polytechnic%20Hanoi!5e0!3m2!1sen!2s!4v1667839440057!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                        </div>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between active mt-1 mb-1">
+                        <div>
+                            <i class="fa-solid fa-bed"></i> 3 Bed
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bath"></i> 2 Bath
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-tv"></i> TV
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-wifi"></i> Wifi
+                        </div>
+                    </div>
+                    <h5 class="card-text pt-1 text-danger  "> $100/Night</h5>
+                    <p class="card-text">Phòng dành cho người nhiều tiền, thích ở phòng sịn,mịn !!!</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between gap-2">
+                    <a href="#!/detail" class="btn btn-bg text-white img2">VIEW DETAIL</a>
+                    <a href="" class="btn btn-dark text-white img2">BOOK NOW</a>
+                </div>
+            </div>
         </div>
     </div>
-    <!--End Google Map-->
+</div>
 
+<!--End Sản phẩm liên quan-->
 
+<!--Google Map-->
+<div class="container-fluid mt-5 ">
+    <div class="row m-2">
+        <h3 class="active text-center">---Bản đồ---</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881391!2d105.7445984141576!3d21.038132792835867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2sFPT%20Polytechnic%20Hanoi!5e0!3m2!1sen!2s!4v1667839440057!5m2!1sen!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+</div>
+<!--End Google Map-->

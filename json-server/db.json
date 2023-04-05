@@ -1,0 +1,142 @@
+{
+  "posts": [
+    {
+      "ten": "thuy",
+      "tuoi": "2222",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "ten": "4444",
+      "tuoi": "3333"
+    },
+    {
+      "id": 5,
+      "ten": "2222",
+      "tuoi": "2222"
+    },
+    {
+      "ten": "2222",
+      "tuoi": "222",
+      "id": 7
+    },
+    {
+      "ten": "222",
+      "tuoi": "222",
+      "id": 8
+    },
+    {
+      "ten": "999",
+      "tuoi": "1999",
+      "id": 9
+    },
+    {
+      "ten": "222",
+      "tuoi": "222",
+      "id": 10
+    },
+    {
+      "ten": "222555",
+      "id": 11
+    },
+    {
+      "ten": "eeee",
+      "tuoi": "eee",
+      "id": 12
+    },
+    {
+      "ten": "ggg",
+      "tuoi": "ggg",
+      "id": 13
+    },
+    {
+      "ten": "hhh",
+      "tuoi": "jjjj",
+      "id": 14
+    },
+    {
+      "ten": "hhhh",
+      "tuoi": "hhh",
+      "id": 15
+    },
+    {
+      "ten": "kkk",
+      "tuoi": "ggg",
+      "id": 16
+    },
+    {
+      "ten": "ukm",
+      "tuoi": "ukm",
+      "id": 17
+    },
+    {
+      "ten": "nanâ",
+      "tuoi": "nana",
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "ten": "thuyii",
+      "tuoi": "66",
+      "id": 20
+    },
+    {
+      "ten": "alloo",
+      "tuoi": "43243",
+      "id": 21
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  },
+  "test": {
+    "name": "typicode"
+  },
+  "bill": [
+    {
+      "ngaynhanphong": "2023-04-05",
+      "ngaytraphong": "2023-04-07",
+      "name": "Hành động1",
+      "cmnd": "12412412432",
+      "ngaysinh": "2023-04-05",
+      "gender": "1",
+      "email": "thuytxph43691@fpt.edu.vn",
+      "address": "HN",
+      "numberphone": "0387976086",
+      "pttt": "1",
+      "id": 1
+    }
+  ],
+  "nhanvien": [
+    {
+      "name": "Trinh Xuan Thuy",
+      "gender": "1",
+      "year": 2003,
+      "level": "1",
+      "sogiolamviec": 10,
+      "totalMoney": 700,
+      "id": 3
+    },
+    {
+      "name": "Hành động12",
+      "gender": "1",
+      "year": 2003,
+      "level": "1",
+      "sogiolamviec": 10,
+      "totalMoney": 700,
+      "id": 4
+    },
+    {
+      "name": "Xuân Thuỷ",
+      "gender": "1",
+      "year": 2003,
+      "level": "1",
+      "sogiolamviec": 8,
+      "totalMoney": 560,
+      "id": 5
+    }
+  ]
+}

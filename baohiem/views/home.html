@@ -1,0 +1,71 @@
+<title>{{title}}</title>
+
+<div class="row">
+    <h3>Thông tin bảo hiểm FPT của {{title}}</h3>
+
+    <div class="form-group mt-3">
+        <label for="my-input">Họ tên</label>
+        <input id="my-input" class="form-control" placeholder="Vui lòng nhập họ tên" ng-model="input.name"  type="text" name="">
+        <p ng-if="check.name==true" class="text-danger">Vui lòng nhập họ tên</p>
+    </div>
+    <div class="form-group mt-3">
+        <label for="my-input">Giới tính</label>
+        <input  class=""  ng-model="input.gender"  type="radio" value="1" name="">Nam 
+        <input  class=""  ng-model="input.gender"  type="radio" value="2" name="">Nữ 
+        <p ng-if="check.gender==true" class="text-danger">Vui lòng nhập giới tính</p>
+    </div>
+    <div class="form-group mt-3 ">
+        <label for="Bậc">Bậc</label>
+        <select ng-model="input.rank" class="form-select">
+            <option value="">Vui lòng chọn!</option>
+            <option value="1">Bậc 1</option>
+            <option value="2">Bậc 2</option>
+            <option value="3">Bậc 3</option>
+        </select>
+        <p ng-if="check.rank==true" class="text-danger">Vui lòng nhập bậc</p>
+    </div>
+    
+    <div class="form-group mt-3 ">
+        <label  class="form-label">Số ngày</label>
+        <input type="number" class="form-control" placeholder="Vui lòng nhạp số ngày" ng-model="input.day">
+        <p ng-if="check.day==true" class="text-danger">Vui lòng nhạp số ngày</p>
+    </div>
+    
+    <!-- <div class="mb-3">
+        <label class="form-label">Họ tên</label>
+        <input type="text" class="form-control" placeholder="Vui lòng nhập họ tên" ng-model="input.name">
+        <p ng-if="check.name==true" class="text-danger">Vui lòng nhập họ tên</p>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Giới tính:</label>
+
+        <input class="form-check-input" type="radio" value="1" name="flexRadioDefault" ng-required="true"
+            id="flexRadioDefault1" ng-model="gender"> Nam
+        <input class="form-check-input" type="radio" ng-model="gender" value="2" name="flexRadioDefault"
+            id="flexRadioDefault2"> Nữ
+        <p ng-if="check.gender" class="text-danger">Vui lòng giới tính</p>
+
+    </div>
+
+    <div class="mb-3"><label for="Bậc">Bậc</label>
+        <select ng-model="rank" class="form-select">
+            <option value="">Vui lòng chọn!</option>
+            <option value="1">Bậc 1</option>
+            <option value="2">Bậc 2</option>
+            <option value="3">Bậc 3</option>
+        </select>
+        <p ng-if="check.rank==true" class="text-danger">Vui lòng nhập bậc</p>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Số ngày</label>
+        <input type="number" class="form-control" placeholder="Vui lòng nhạp số ngày" ng-model="input.day">
+        <p ng-if="check.day==true" class="text-danger">Vui lòng nhạp số ngày</p>
+    </div>
+</div> -->
+<button ng-click="submit()" class="btn btn-primary mt-3">Submit</button>
+
+
+<h3 class="mt-3" ng-if="kiemTra==true">{{gender}} {{name}} là {{detail}} {{bac}} được chi trả {{totalMoney}} tiền viện
+    phí</h3>

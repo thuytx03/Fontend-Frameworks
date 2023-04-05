@@ -1,20 +1,22 @@
-window.GioiThieuController = function ($scope, $routeParams) {
+window.GioiThieuController = function ($scope, $routeParams, $http) {
   // $routeParams sẽ ra một đối tượng chưa param trên url
   // console.log($routeParams.name);
   $scope.title = "Đây là trang giới thiệu";
-  $scope.danhsach = [
-    {
-      id: 1,
-      ten: "Thuy",
-      tuoi: 19,
-    },
-    {
-      id: 2,
-      ten: "Xuan",
-      tuoi: 19,
-    },
-  ];
 
+  //tham số $http là giao thức để gọi api
+  let apiURL = " http://localhost:3000/posts"; // điền link api mà mình muốnn gọi
+
+  $scope.getData = function () {
+    $http.get(apiURL).then(function (response) {
+      //khi gọi api thành công cục reponse se nhận dữ liệu
+      // console.log(response);
+      if (response.status == 200) {
+        $scope.danhsach = response.data;
+      }
+    });
+  };
+  $scope.getData();
+  
   $scope.kiemTraDuLieu = {
     ten: false, //chưa có lỗi mặc định là false
     tuoi: false,
@@ -42,53 +44,66 @@ window.GioiThieuController = function ($scope, $routeParams) {
       let editId = $scope.editId;
       // kiểm tra nếu tồn tại edtId là sửa
       if (editId) {
-        for (let i = 0; i < $scope.danhsach.length; i++) {
-          if ($scope.danhsach[i].id == editId) {
-            ($scope.danhsach[i].ten = $scope.inputValue.ten),
-              ($scope.danhsach[i].tuoi = $scope.inputValue.tuoi);
-          }
-        }
+        //tạo đối tượng updateItem
+        let updateItem = {
+          ten: $scope.inputValue.ten,
+          tuoi: $scope.inputValue.tuoi,
+        };
+        $http
+          .put(
+            `${apiURL}/${editId}`, //đường link cập nhật theo id
+            updateItem //dữ liệu được update
+          )
+          .then(function (response) {
+            if (response.status === 200) {
+              $scope.getData(); //gọi lại hàm getData để update lại
+            }
+          });
         $scope.onClose();
         return;
       }
 
-      let ds = $scope.danhsach;
-      //fake id tự tăng
-      let newId = ds.length > 0 ? ds[ds.length - 1].id + 1 : 1;
       let newItem = {
-        id: newId,
         ten: $scope.inputValue.ten,
         tuoi: $scope.inputValue.tuoi,
       };
-      $scope.danhsach.push(newItem);
+      $http
+        .post(
+          apiURL, // đường dẫn api
+          newItem //dữ liệu thêm
+        )
+        .then(function (response) {
+          console.log(response);  
+          if (response.status == 201) {
+            $scope.getData();
+          }
+        });
       $scope.onClose();
     }
   };
   $scope.onEdit = function (editId) {
     $scope.editId = editId;
-    //tạo ra một đối tượng editItem
-    let editItem = {
-      ten: "",
-      tuoi: "",
-    };
-    for (let i = 0; i < $scope.danhsach.length; i++) {
-      if ($scope.danhsach[i].id == editId) {
-        editItem.ten = $scope.danhsach[i].ten;
-        editItem.tuoi = $scope.danhsach[i].tuoi;
+    // goij API để lấy dữ liệu theo edit ID và bắn lên form
+    $http.get(`${apiURL}/${editId}`).then(function (response) {
+      if (response.status == 200) {
+        //hiển thị thông tin cần sửa lên form
+        $scope.inputValue = {
+          ten: response.data.ten,
+          tuoi: response.data.tuoi,
+        };
       }
-    }
-    //hiển thị thông tin cần sửa lên form
-    $scope.inputValue = {
-      ten: editItem.ten,
-      tuoi: editItem.tuoi,
-    };
+      console.log(response);
+    });
   };
   $scope.onDelete = function (deleteId) {
     let confirm = window.confirm("Bạn có muốn xoá không?");
     if (confirm) {
       //xoá
-      $scope.danhsach = $scope.danhsach.filter(function (item) {
-        return item.id !== deleteId;
+      $http.delete(`${apiURL}/${deleteId}`).then(function (response) {
+        if (response.status == 200) {
+          //hiển thị thông tin cần sửa lên form
+          $scope.getData();
+        }
       });
     }
   };
