@@ -23,6 +23,7 @@
     $scope.sayHello=function(){
         // alert("Hello");
         $scope.thongbao=$scope.test; //lấy dữ từ input sau đó gán cho biến thông báo
+
         if($scope.doibong==1){
             $scope.thongbao="Arsenal"; 
         }else if($scope.doibong==2){
@@ -38,7 +39,7 @@
         }else{
             $scope.thongbao="Bê đê";
         }
-        // alert($scope.doibong); //lấy ra value của select
+        alert($scope.doibong); //lấy ra value của select
 
     }
 
