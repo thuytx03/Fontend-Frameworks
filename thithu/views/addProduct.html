@@ -1,0 +1,32 @@
+<title>Thêm sản phẩm</title>
+<div class="container">
+    <h1>Trang thêm mới sản phẩm</h1>
+    <div class="form-group mt-3">
+        <label for="my-input">Name</label>
+        <input id="my-input" class="form-control" ng-model="inputValue.name" type="text" name="">
+        <span class="text-danger" ng-show="kiemTraDuLieu.name">{{ kiemTraDuLieu.name }}</span>
+    </div>
+    <div class="form-group mt-3">
+        <label for="my-input">Price</label>
+        <input id="my-input" class="form-control" ng-model="inputValue.price" type="text" name="">
+        <span class="text-danger" ng-show="kiemTraDuLieu.price">{{ kiemTraDuLieu.price }}</span>
+
+    </div>
+    <div class="form-group mt-3">
+        <label for="my-input">Category</label>
+        <select name="" id="" ng-model="inputValue.categoryName" class="form-select">
+            <option value="">Vui lòng chọn</option>
+            <option value="1">Quần</option>
+            <option value="2">Áo</option>
+            <option value="3">Giày</option>
+            <option value="4">Dép</option>
+        </select>
+        <span class="text-danger" ng-show="kiemTraDuLieu.categoryName">{{ kiemTraDuLieu.categoryName }}</span>
+
+    </div>
+    <div class="form-group mt-3">
+        <button class="btn btn-primary" ng-click="onSubmitForm()">Thêm mới</button>
+        <a href="#!/" class="btn btn-success">Danh sách</a>
+    </div>
+   
+</div>

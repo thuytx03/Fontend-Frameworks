@@ -1,0 +1,27 @@
+<h1>Thông tin tác giả</h1>
+<table class="table table-striped text-center table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Địa chỉ</th>
+            <th><a href="#!/tac-gia/add" class="btn btn-success">Thêm</a></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="value in tacgia">
+                <td scope="row">{{ value.id }}</td>
+                <td>{{ value.name }}</td>
+                <td>{{ value.tuoi }}</td>
+                <td>{{ value.gioiTinh==1 ?"Nam":"Nữ" }}</td>
+                <td>{{ value.diaChi }}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="onEdit(value.id)">Sửa</button>
+                    <button class="btn btn-danger" ng-click="onDelete(value.id)">Xoá</button>
+                </td>
+            </tr>
+           
+        </tbody>
+</table>

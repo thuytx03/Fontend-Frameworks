@@ -1,0 +1,38 @@
+<title>Trang Product</title>
+
+<table class="table text-center table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>categoryName</th>
+            <th>
+                <a href="#!/product/add" class="btn btn-success w-25">Create</a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="value in product">
+                <td scope="row">{{ value.id }}</td>
+                <td>{{ value.name }}</td>
+                <td>{{ value.price }}</td>
+                <td>
+                     {{
+                        value.categoryName == 1 ? 'Quần' :
+                        value.categoryName == 2 ? 'Áo' :
+                        value.categoryName == 3 ? 'Giày' :
+                        value.categoryName == 4 ? 'Dép' :
+                        ''
+                      }}
+                </td>
+                <td>
+                    <button ng-click="onDelete(value.id)" class="btn btn-danger w-25">Delete</button>
+                    <button ng-click="onEdit(value.id)" class="btn btn-primary w-25">Edit</button>
+
+                </td>
+            </tr>
+        </tbody>
+</table>
+
+

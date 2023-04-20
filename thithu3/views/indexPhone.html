@@ -1,0 +1,38 @@
+<table class="table text-center table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Hãng</th>
+            <th>Dung lượng</th>
+            <th>Giá</th>
+            <th>
+                <a href="#!/phone/add" class="btn btn-success">Thêm</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dt in dienthoai">
+            <td scope="row">{{ dt.id }}</td>
+            <td>{{ dt.ten }}</td>
+            <td>{{ dt.hang==1?"SamSung":
+                dt.hang==2?"Iphone":
+                dt.hang==3?"Oppo": ""
+                }}</td>
+            <td>{{
+                dt.dungLuong==1? "64GB" :
+                dt.dungLuong==2? "128GB" :
+                dt.dungLuong==3? "256GB" :
+                dt.dungLuong==4? "512GB" :
+                dt.dungLuong==5? "1TB" :""
+
+                }}</td>
+            <td>{{ dt.gia }}</td>
+            <td>
+                <button class="btn btn-danger" ng-click="onDelete(dt.id)">Xoá</button>
+                <button class="btn btn-primary" ng-click="onEdit(dt.id)">Sửa</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

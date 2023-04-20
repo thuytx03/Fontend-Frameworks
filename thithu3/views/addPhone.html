@@ -1,0 +1,37 @@
+<h1>Thêm mới điện thoại</h1>
+<div class="form-group mt-2">
+    <label for="my-input">Tên</label>
+    <input id="my-input" class="form-control" ng-model="inputValue.ten" type="text" name="">
+    <span class="text-danger" ng-show="kiemTraDuLieu.ten">{{ kiemTraDuLieu.ten }}</span>
+</div>
+<div class="form-group mt-2">
+    <label for="my-input">Hãng</label>
+    <select name="" id="" class="form-select" ng-model="inputValue.hang">
+        <option value="">Vui lòng chọn</option>
+        <option value="1">SamSung</option>
+        <option value="2">Iphone</option>
+        <option value="3">Oppo</option>
+    </select>
+    <span class="text-danger" ng-show="kiemTraDuLieu.hang">{{ kiemTraDuLieu.hang }}</span>
+</div>
+<div class="form-group mt-2">
+    <label for="my-input">Dung lượng</label>
+    <select name="" id="" class="form-select" ng-model="inputValue.dungLuong">
+        <option value="">Vui lòng chọn</option>
+        <option value="1">64GB</option>
+        <option value="2">128GB</option>
+        <option value="3">256GB</option>
+        <option value="4">512GB</option>
+        <option value="5">1TB</option>
+    </select>
+    <span class="text-danger" ng-show="kiemTraDuLieu.dungLuong">{{ kiemTraDuLieu.dungLuong }}</span>
+</div>
+<div class="form-group mt-2">
+    <label for="my-input">Giá</label>
+    <input id="my-input" class="form-control" ng-model="inputValue.gia" type="text" name="">
+    <span class="text-danger" ng-show="kiemTraDuLieu.gia">{{ kiemTraDuLieu.gia }}</span>
+</div>
+<div class="form-group mt-2">
+    <button class="btn btn-primary" ng-click="onSubmitForm()">Submit</button>
+    <a href="#!/phone" class="btn btn-success">Danh sách</a>
+</div>

@@ -1,0 +1,27 @@
+<h1>Edit</h1>
+<div class="form-group mt-2">
+    <label for="my-input">Tên</label>
+    <input id="my-input" class="form-control" type="text" name="" ng-model="inputValue.name">
+    <span class="text-danger" ng-show="kiemTraDuLieu.name">{{ kiemTraDuLieu.name }}</span>
+</div>
+<div class="form-group mt-2">
+    <label for="my-input">Tuổi</label>
+    <input id="my-input" class="form-control" type="text" name="" ng-model="inputValue.tuoi">
+    <span class="text-danger" ng-show="kiemTraDuLieu.tuoi">{{ kiemTraDuLieu.tuoi }}</span>
+</div>
+<div class="form-group mt-2">
+    <label for="my-input">Giới tính</label>
+    <input id="my-input"  type="radio" name="gioiTinh" ng-model="inputValue.gioiTinh" value="1"> Nam
+    <input id="my-input"  type="radio" name="gioiTinh" ng-model="inputValue.gioiTinh" value="2"> Nữ
+</div>
+<span class="text-danger" ng-show="kiemTraDuLieu.gioiTinh">{{ kiemTraDuLieu.gioiTinh }}</span>
+
+<div class="form-group mt-2">
+    <label for="my-input">Địa chỉ</label>
+    <input id="my-input" class="form-control" type="text" name="" ng-model="inputValue.diaChi">
+    <span class="text-danger" ng-show="kiemTraDuLieu.diaChi">{{ kiemTraDuLieu.diaChi }}</span>
+</div>
+<div class="form-group mt-2">
+    <button class="btn btn-primary" ng-click="onSubmitForm()">Submit</button>
+    <a href="#!/" class="btn btn-success">Danh sách</a>
+</div>
